@@ -58,20 +58,20 @@
     <!-- Features -->
 
     <section id="features">
-        <div class="row container-fluid">
-            <div class="col-lg-4 feature-box">
-                <i class="bi bi-check-circle-fill"></i>
+        <div class="row container">
+            <div class="col-lg-4 feature-box text-center">
+                <i class="bi bi-check-circle-fill feature-icon"></i>
                 <h3>Easy to use.</h3>
                 <p>So easy to use, even your dog could do it.</p>
             </div>
-            <div class="col-lg-4 feature-box">
-                <i class="bi bi-bullseye"></i>
+            <div class="col-lg-4 feature-box text-center">
+                <i class="bi bi-bullseye feature-icon"></i>
                 <h3>Elite Clientele</h3>
                 <p>We have all the dogs, the greatest dogs.</p>
             </div>
 
-            <div class="col-lg-4 feature-box">
-                <i class="bi bi-heart-fill"></i>
+            <div class="col-lg-4 feature-box text-center">
+                <i class="bi bi-heart-fill feature-icon"></i>
                 <h3>Guaranteed to work.</h3>
                 <p>Find the love of your dog's life or your money back.</p>
             </div>
@@ -84,13 +84,28 @@
 
     <section id="testimonials">
 
-        <h2>I no longer have to sniff other dogs for love. I've found the hottest Corgi on TinDog. Woof.</h2>
-        <img src="images/dog-img.jpg" alt="dog-profile">
-        <em>Pebbles, New York</em>
-
-        <!-- <h2 class="testimonial-text">My dog used to be so lonely, but with TinDog's help, they've found the love of their life. I think.</h2>
-        <img class="testimonial-image" src="images/lady-img.jpg" alt="lady-profile">
-        <em>Beverly, Illinois</em> -->
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                    <h2 class="testimonial-text">I no longer have to sniff other dogs for love. I've found the hottest Corgi on TinDog. Woof.</h2>
+                    <img class="testimonial-image" src="images/dog-img.jpg" alt="dog-profile">
+                    <em>Pebbles, New York</em>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <h2 class="testimonial-text">My dog used to be so lonely, but with TinDog's help, they've found the love of their life. I think.</h2>
+                    <img class="testimonial-image" src="images/lady-img.jpg" alt="lady-profile">
+                    <em>Beverly, Illinois</em>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
 
     </section>
 
@@ -98,10 +113,10 @@
     <!-- Press -->
 
     <section id="press">
-        <img src="images/techcrunch.png" alt="tc-logo">
-        <img src="images/tnw.png" alt="tnw-logo">
-        <img src="images/bizinsider.png" alt="biz-insider-logo">
-        <img src="images/mashable.png" alt="mashable-logo">
+        <img class="press-img" src="images/techcrunch.png" alt="tc-logo">
+        <img class="press-img" src="images/tnw.png" alt="tnw-logo">
+        <img class="press-img" src="images/bizinsider.png" alt="biz-insider-logo">
+        <img class="press-img" src="images/mashable.png" alt="mashable-logo">
 
     </section>
 
