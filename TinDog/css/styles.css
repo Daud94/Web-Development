@@ -1,11 +1,8 @@
 body {
     font-family: 'Montserrat', sans-serif;
 }
-
-#title {
-    background-color: #ff4c68;
+.container-fluid{
     padding: 3% 15%;
-    color: white;
 }
 
 h1 {
@@ -25,6 +22,12 @@ h3{
 }
 p{
     color: grey;
+}
+
+#title {
+    background-color: #ff4c68;
+    padding: 3% 15%;
+    color: white;
 }
 
 .bi-apple {
@@ -62,12 +65,19 @@ p{
 
 /*Title image*/
 .title-image {
-    width: 60%;
+    width: 15% ;
     transform: rotate(25deg);
+    position: absolute;
+    margin-left: 10%;
 }
+
 /*Features section*/
 #features{
-    padding: 3% 25%;
+    padding: 7% 15%;
+    background-color: white;
+    position: relative;
+    z-index: 1;
+
 }
 .bi-check-circle-fill, .bi-bullseye, .bi-heart-fill{
     font-size: 3.5rem;
@@ -108,4 +118,24 @@ p{
 .press-img{
     width: 15%;
      margin: 20px 20px  50px;
+}
+
+/*Pricing section*/
+#pricing{
+    padding: 100px;
+}
+.pricing-col{
+    padding: 3% 2%;
+}
+
+@media (max-width: 991px ) {
+    #title{
+        text-align: center;
+    }
+    .title-image{
+        position: static;
+        width: 50%;
+        transform: rotate(0);
+    }
+
 }
