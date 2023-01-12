@@ -25,8 +25,9 @@ app.post("/", function (req, res){
     const lastName = body.lastName
     const email = body.email
 
+    // post request to mailchimp server
     const run = async () => {
-        const response = await client.lists.addListMember("0d2287345c",{
+        let response =  await client.lists.addListMember("0d2287345c", {
             email_address: email,
             status: "subscribed",
             merge_fields: {
@@ -35,11 +36,26 @@ app.post("/", function (req, res){
             }
         })
         console.log(response)
+        return response
     }
-    run()
+    run().then(function (value){
+        if (value.merge_fields.FNAME === firstName && value.merge_fields.LNAME === lastName){
+            res.sendFile(__dirname + "/success.html")
+        } else {
+            res.sendFile(__dirname + "/failure.html")
+        }
+    }).catch((err) => {
+        if (err.status !== 200){
+            res.sendFile(__dirname + "/failure.html")
+        }
+    })
 })
 
-app.listen(3000, function (){
+app.post("/failure",function(req, res){
+    res.redirect("/")
+})
+// to deply on heroku - process.env.PORT
+app.listen(process.env.PORT || 3000, function (){
     console.log("Server is running on port 3000")
 })
 
